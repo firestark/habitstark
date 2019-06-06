@@ -1,0 +1,50 @@
+{
+	"name": "firestark/goalstark",
+	"type": "project",
+	"description": "",
+	"keywords": [
+		"framework",
+		"non-mvc",
+		"business logic",
+		"firestark"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Aron Wouters",
+			"email": "firestark@mail.com",
+			"role": "Developer",
+			"homepage": "https://eyedouble.nl/"
+		}
+	],
+	"require": {
+		"firebase/php-jwt": "dev-master",
+		"firestark/ioc": "*",
+		"firestark/http": "*",
+		"firestark/support": "*",
+		"jenssegers/blade": "*"
+	},
+	"require-dev": {
+		"firestark/testing": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"": [
+				"app/agreements",
+				"client/facades",
+				"client/services"
+			],
+			"firestark\\": "client/app"
+		},
+		"files": [
+			"client/app/readability.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {}
+	},
+	"config": {
+		"preferred-install": "dist"
+	},
+	"minimum-stability": "dev"
+}

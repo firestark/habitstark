@@ -426,13 +426,6 @@ input:-webkit-autofill:active  {
     } 
 }
 
-.mdc-top-app-bar {
-    @include mdc-top-app-bar-ink-color(var(--mdc-theme-text-primary-on-background));    
-    
-    position: relative;
-    background: transparent;
-}
-
 #logo {
     height: 56px;
     display: block;
@@ -526,6 +519,10 @@ form > *:not(:last-of-type) {
     height: 100px;
 }
 
+.mdc-tab {
+    flex: none;
+}
+
 .mdc-tab-indicator {
     left: auto;
     width: 50%;
@@ -544,10 +541,27 @@ form > *:not(:last-of-type) {
     }
 }
 
-.mdc-top-app-bar__title {
-    font-size: 0.785rem;
-    color: var(--mdc-theme-text-secondary-on-background);
-    padding-left: 32px;
+.mdc-top-app-bar {
+        
+    @include mdc-top-app-bar-icon-ink-color(#fff);
+    @include mdc-top-app-bar-ink-color(var(--mdc-theme-on-primary));      
+
+    position: relative;
+    background: var(--mdc-theme-primary);
+    
+
+    .mdc-tab-bar {
+        @include mdc-tab-text-label-color(#fff);
+        @include mdc-tab-icon-color(#fff);
+        @include mdc-tab-states-color(#fff);
+
+        position: relative;
+        top: 1px;
+
+        .mdc-tab-indicator .mdc-tab-indicator__content--underline {
+            border-color: #fff;
+        }
+    }
 }
 
 #bottom-navigation {
@@ -621,6 +635,10 @@ form > *:not(:last-of-type) {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+    #app {
+        grid-template-columns: 1fr;
+    }
+
     .mdc-snackbar {
         bottom: 138px;
         left: 0;
@@ -647,15 +665,10 @@ form > *:not(:last-of-type) {
         align-self: end;
     }
 
-    #title-center {
-        padding: 0; 
-        align-self: center; 
-        position: absolute; 
-        text-align: center; 
-        left: 0; 
-        right: 0;
-        pointer-events: none;
+    .mdc-tab {
+        flex: 1 0 auto;
     }
+    
 }
   
   /* 
@@ -664,6 +677,10 @@ form > *:not(:last-of-type) {
   */
   
 @media (min-width: 320px) and (max-width: 480px) {
+
+    #app {
+        grid-template-columns: 1fr;
+    }
 
     .mdc-snackbar {
         bottom: 138px;
@@ -691,14 +708,8 @@ form > *:not(:last-of-type) {
         align-self: end;
     }
 
-    #title-center {
-        padding: 0; 
-        align-self: center; 
-        position: absolute; 
-        text-align: center; 
-        left: 0; 
-        right: 0;
-        pointer-events: none;
+    .mdc-tab {
+        flex: 1 0 auto;
     }
 }
   

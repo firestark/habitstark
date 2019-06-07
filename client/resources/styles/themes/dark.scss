@@ -50,8 +50,4 @@
     .mdc-drawer {
         @include mdc-drawer-fill-color-accessible(#181617);
     }
-
-    .mdc-top-app-bar {
-        @include mdc-top-app-bar-icon-ink-color(rgba(255, 255, 255, 0.54));
-    }
 }

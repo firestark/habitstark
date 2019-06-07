@@ -5,16 +5,17 @@
         @include ( 'partials.drawer' )
                 
         <div id="page">
-            <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+            <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z2" style="position: relative;">
                 <div class="mdc-top-app-bar__row">
                     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-                        @yield ( 'navigation' )                        
+                        @yield ( 'navigation' )
+                        <span class="mdc-top-app-bar__title">@yield ( 'title' )</span>                   
                     </section>                    
 
                     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">                
                         
                         @yield ( 'top-app-bar--actions' )
-                        @include ( 'partials.avatar' )
+                        @include ( 'partials.more' )
                     </section>
                 </div>
             </header>

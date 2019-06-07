@@ -1,8 +1,8 @@
 <?php
 
-app::bind ( todo::class, function ( $app )
+app::bind ( goal\habit::class, function ( $app )
 {
-    return new todo (
+    return new goal\habit (
         input::get ( 'id', uniqid ( ) ),
         input::get ( 'description', '' ),
         time ( )

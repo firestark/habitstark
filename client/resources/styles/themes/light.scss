@@ -36,8 +36,4 @@
     .mdc-drawer {
         @include mdc-drawer-surface-fill-color(#fff);
     }
-
-    .mdc-top-app-bar {
-        @include mdc-top-app-bar-icon-ink-color(rgba(0, 0, 0, 0.54));
-    }
 }

@@ -461,6 +461,15 @@ main {
 
 // lists
 
+.completed {
+    color: #1F8D3E;
+    fill: #1F8D3E;
+}
+
+.mdc-list-item__graphic.completed::after {
+    background-color: #1F8D3E;
+}
+
 .mdc-list-item__primary-text {
     font-weight: 600;
     font-size: 0.875rem;

@@ -1,1 +1,1 @@
-a:1:{s:13:"5cfb8fc1f0fe8";O:4:"goal":4:{s:2:"id";s:13:"5cfb8fc1f0fe8";s:11:"description";s:48:"I want to be a person who doesn't miss workouts.";s:9:"createdAt";i:1559990209;s:6:"habits";a:1:{s:13:"5cfb8fdc93e32";O:10:"goal\habit":3:{s:2:"id";s:13:"5cfb8fdc93e32";s:11:"description";s:60:"On non gym days do one exercise for 4 sets of 8 repetitions.";s:9:"createdAt";i:1559990236;}}}}
+a:1:{s:13:"5cfbc3723a5cf";O:4:"goal":4:{s:2:"id";s:13:"5cfbc3723a5cf";s:11:"description";s:31:"I want to be a runner. updated.";s:9:"createdAt";i:1560003738;s:6:"habits";a:0:{}}}

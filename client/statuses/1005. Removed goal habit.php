@@ -1,7 +1,7 @@
 <?php
 
-status::matching ( 1005, function ( $goalid )
+status::matching ( 1005, function ( )
 {
     session::flash ( 'message', 'Habit removed.' );
-    return redirect::to ( '/' . $goalid . '/habits' );
+    return redirect::back ( );
 } );

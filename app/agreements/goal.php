@@ -17,6 +17,11 @@ class goal
 
     function add ( goal\habit $habit )
     {
-        $this->habits [ ] = $habit;
+        $this->habits [ $habit->id ] = $habit;
+    }
+
+    function remove ( goal\habit $habit )
+    {
+        unset ( $this->habits [ $habit->id ] );
     }
 }

@@ -37,6 +37,7 @@
 			"firestark\\": "client/app"
 		},
 		"files": [
+			"app/time.php",
 			"client/app/readability.php"
 		]
 	},

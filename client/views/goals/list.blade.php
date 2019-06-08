@@ -38,7 +38,7 @@
                 <div style="padding: 0 0 32px 24px;">                
                     @foreach ( $goal->habits as $habit )
                         <li class="mdc-list-item">
-                            <span 
+                            <a href="/{{ $goal->id }}/habits/{{ $habit->id }}/complete"
                                 class="mdc-list-item__graphic" 
                                 aria-hidden="true">
                                 
@@ -46,7 +46,7 @@
                                     <path fill="none" d="M0 0h24v24H0V0z"/>
                                     <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
                                 </svg>
-                            </span>
+                            </a>
 
 
                             <a href="/{{ $goal->id }}" style="position: relative">

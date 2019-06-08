@@ -6,7 +6,9 @@ use goal;
 
 interface manager
 {
-    function has ( $id ) : bool;
+    function has ( goal $goal ) : bool;
+
+    function hasId ( $id ) : bool;
     
     function add ( goal $goal );
 

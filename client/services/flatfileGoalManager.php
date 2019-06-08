@@ -23,7 +23,12 @@ class flatfileGoalManager implements goal\manager
         $this->write ( );
     }
 
-    function has ( $id ) : bool
+    function has ( goal $goal ) : bool
+    {
+        return isset ( $this->goals [ $goal->id ] );
+    }
+
+    function hasId ( $id ) : bool
     {
         return isset ( $this->goals [ $id ] );
     }

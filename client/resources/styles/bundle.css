@@ -5079,6 +5079,9 @@ main {
   right: 40px;
   z-index: 5000; }
 
+.form-field {
+  display: inline-block; }
+
 .form-section {
   padding: 16px; }
 

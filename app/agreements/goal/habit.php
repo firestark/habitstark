@@ -2,19 +2,28 @@
 
 namespace goal;
 
+use goal\habit\level;
+
 class habit
 {
     public $id = null;
-    public $description = '';
+    public $title = '';
     public $createdAt = 0;
+    public $levels = [ ];
     public $completions = [ ];
 
-    function __construct ( $id, string $description, int $createdAt, array $completions = [ ] )
+    function __construct ( $id, string $title, int $createdAt, array $levels = [ ], array $completions = [ ] )
     {
         $this->id = $id;
-        $this->description = $description;
+        $this->title = $title;
         $this->createdAt = $createdAt;
+        $this->levels = $levels;
         $this->completions = $completions;
+    }
+
+    function add ( level $level )
+    {
+        $this->levels [ ] = $level;
     }
 
     function complete ( )

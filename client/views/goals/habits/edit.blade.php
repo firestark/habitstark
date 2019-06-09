@@ -5,16 +5,18 @@
 @endsection
 
 @section ( 'title' )
-    New habit
+    My habit
 @endsection
+
+@include ( 'goals.habits.tab-bar', [ 'goalid' => $goalid, 'habitid' => $habit->id ] )
 
 @section ( 'content' )
 
     <form method="POST" style="display: grid; height: 100%;" action="/{{ $goalid }}/habits">
-        @include ( 'partials.input.title' )
+        <div style="padding: 24px;">
+            @include ( 'partials.input.title', [ 'value' => $habit->title ] )    
+        </div>
 
-        {{-- <textarea class="mdc-typography--body1" name="description" placeholder="Description" style="width: 100%; height: 100%; box-sizing: border-box; resize: none; border: none; padding: 24px;"></textarea> --}}
-    
         @include ( 'partials.form.fab', [ 'action' => 'save' ] )
     </form>
 @endsection

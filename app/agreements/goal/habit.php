@@ -26,6 +26,12 @@ class habit
         $this->levels [ ] = $level;
     }
 
+    function remove ( int $number )
+    {
+        unset ( $this->levels [ $number ] );
+        $this->levels = array_values ( $this->levels );
+    }
+
     function complete ( )
     {
         $this->completions [ ] = time ( );

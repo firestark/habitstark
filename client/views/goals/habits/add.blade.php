@@ -11,9 +11,9 @@
 @section ( 'content' )
 
     <form method="POST" style="display: grid; height: 100%;" action="/{{ $goalid }}/habits">
-        @include ( 'partials.input.title' )
-
-        {{-- <textarea class="mdc-typography--body1" name="description" placeholder="Description" style="width: 100%; height: 100%; box-sizing: border-box; resize: none; border: none; padding: 24px;"></textarea> --}}
+        <div style="padding: 24px;">
+            @include ( 'partials.input.title' )
+        </div>
     
         @include ( 'partials.form.fab', [ 'action' => 'save' ] )
     </form>

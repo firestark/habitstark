@@ -32,6 +32,11 @@ class habit
         $this->levels = array_values ( $this->levels );
     }
 
+    function update ( level $level, int $number )
+    {
+        $this->levels [ $number ] = $level;
+    }
+
     function complete ( )
     {
         $this->completions [ ] = time ( );

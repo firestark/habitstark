@@ -26,7 +26,7 @@
                     </a>
 
 
-                    <a href="/{{ $goalid }}" style="position: relative">
+                    <a href="/{{ $goalid }}/habits/{{ $habit->id }}/levels/{{ $number }}" style="position: relative">
                         <span class="mdc-list-item__text" style="width: 100%; display: grid; padding-right: 16px;">
                             <span class="mdc-list-item__primary-text">{{ $level->description }}</span>
                             <span class="mdc-list-item__secondary-text">Level {{ $number + 1 }}</span>

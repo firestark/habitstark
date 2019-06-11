@@ -16,7 +16,7 @@
             @foreach ( $habit->levels as $number => $level )
                 <li class="mdc-list-item">
                     <a href="/{{ $goalid }}/habits/{{ $habit->id }}/complete"
-                        class="mdc-list-item__graphic" 
+                        class="mdc-list-item__graphic {{ $number === $habit->level ? 'completed' : '' }}" 
                         aria-hidden="true">
                         
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

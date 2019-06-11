@@ -35,7 +35,7 @@
                     </a>
                 </li>
 
-                <div style="padding: 0 0 32px 24px;">                
+                <ul class="mdc-list--nested">                
                     @foreach ( $goal->habits as $habit )
                         <li class="mdc-list-item">
                             <a href="/{{ $goal->id }}/habits/{{ $habit->id }}/complete"
@@ -66,7 +66,7 @@
                             </a>
                         </li>
                     @endforeach
-                </div>
+                </ul>
             @endforeach
         </ul>
     @else

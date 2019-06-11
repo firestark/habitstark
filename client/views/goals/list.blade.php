@@ -51,7 +51,9 @@
 
                             <a href="/{{ $goal->id }}/habits/{{ $habit->id }}" style="position: relative">
                                 <span class="mdc-list-item__text" style="width: 100%; display: grid; padding-right: 16px;">
-                                    <span class="mdc-list-item__primary-text">{{ $habit->title }}</span>
+                                    <span class="mdc-list-item__primary-text">{{ $habit->title }}
+                                        <span style="color: var(--mdc-theme-text-secondary-on-background, rgba(0, 0, 0, 0.54)); vertical-align: super; font-size: 0.785rem;">(lvl {{ $habit->level + 1 }})</span>
+                                    </span>
                                     <span class="mdc-list-item__secondary-text">Created at {{  date ( 'M d, Y ', $habit->createdAt ) }}</span>
                                 </span>
                             </a>

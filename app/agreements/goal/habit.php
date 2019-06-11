@@ -10,9 +10,10 @@ class habit
     public $title = '';
     public $createdAt = 0;
     public $levels = [ ];
+    public $level = 0;
     public $completions = [ ];
 
-    function __construct ( $id, string $title, int $createdAt, array $levels = [ ], array $completions = [ ] )
+    function __construct ( $id, string $title, int $createdAt, array $levels = [ ], int $level = 0, array $completions = [ ] )
     {
         $this->id = $id;
         $this->title = $title;

@@ -5,8 +5,8 @@
 @endsection
 
 @section ( 'content' )
-    @if ( count ( $goals ) )
-        <ul id="goals-list" class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
+    @if ( count ( $goals ) )        
+        <ul id="goals-list" class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked" style="padding-bottom: 80px;">
             @foreach ( $goals as $goal )
                 <li class="mdc-list-item">
                     <a href="/{{ $goal->id}}/habits/add" 
@@ -69,6 +69,7 @@
                 </ul>
             @endforeach
         </ul>
+        
     @else
         <div style="text-align: center; margin: 56px auto 0; width: 230px;">
             <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="var(--mdc-theme-primary)" style="opacity: 0.87;">
@@ -92,11 +93,13 @@
     @include ( 'partials.link.fab', [ 'action' => 'add', 'link' => '/add' ] )
 @endsection
 
-@section ( 'js' )
-    @parent
-    
-    <script>
-        const goalsList = mdc.list.MDCList.attachTo ( document.getElementById ( 'goals-list' ) );
-        const goalsListItemRipples = goalsList.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
-    </script>
-@endsection
+@if ( count ( $goals ) )   
+    @section ( 'js' )
+        @parent
+        
+        <script>
+            const goalsList = mdc.list.MDCList.attachTo ( document.getElementById ( 'goals-list' ) );
+            const goalsListItemRipples = goalsList.listElements.map ( ( listItemEl ) => mdc.ripple.MDCRipple.attachTo ( listItemEl ) );
+        </script>
+    @endsection
+@endif

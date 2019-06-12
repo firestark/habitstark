@@ -583,6 +583,7 @@ form > *:not(:last-of-type) {
 
     position: relative;
     background: var(--mdc-theme-primary);
+    user-select: none;
     
 
     .mdc-tab-bar {

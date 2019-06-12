@@ -24,15 +24,15 @@
         <ul id="habits-levels-list" class="mdc-list mdc-list--two-line mdc-list--avatar-list mdc-list--highlight mdc-list--linked">
             @foreach ( $habit->levels as $number => $level )
                 <li class="mdc-list-item">
-                    <a href="/{{ $goalid }}/habits/{{ $habit->id }}/complete"
+                    <span
                         class="mdc-list-item__graphic {{ $number === $habit->level ? 'completed' : '' }}" 
                         aria-hidden="true">
                         
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path fill="none" d="M0 0h24v24H0V0z"/>
-                            <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"/>
+                            <path d="M16 18H6V8h3v4.77L15.98 6 18 8.03 11.15 15H16v3z"/>
+                            <path fill="none" d="M0 0h24v24H0z"/>
                         </svg>
-                    </a>
+                    </span>
 
 
                     <a href="/{{ $goalid }}/habits/{{ $habit->id }}/levels/{{ $number }}" style="position: relative">

@@ -22,6 +22,11 @@ class habit
         $this->completions = $completions;
     }
 
+    function levelup ( )
+    {
+        $this->level++;
+    }
+
     function add ( level $level )
     {
         $this->levels [ ] = $level;

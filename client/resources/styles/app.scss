@@ -870,3 +870,24 @@ section#login {
         margin-right: 8px;
     }
 }
+
+.calendar {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+
+    th, td {
+        text-align: center;
+    }
+
+    td.today span {
+        display: inline-block;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        padding: 8px;
+        background: var(--mdc-theme-primary);
+        color: var(--mdc-theme-on-primary);
+        text-align: center;
+    }
+}

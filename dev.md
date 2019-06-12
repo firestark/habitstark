@@ -1,9 +1,18 @@
 # Todo
 
+- Habit calendar tab to show completions
+
+
+
+# Ideas 
+
 - Simplify goal / habit / level process
 - Level up every day functionality
 - Recipies
-- Habit streak
+
+- Progress
+    - Habit streak
+    - Habit total completions 
 
 
 # Pain points

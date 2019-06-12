@@ -36,6 +36,9 @@ class habit
     {
         unset ( $this->levels [ $number ] );
         $this->levels = array_values ( $this->levels );
+        
+        if ( $number <= $this->level )
+            $this->level = 0;
     }
 
     function update ( level $level, int $number )

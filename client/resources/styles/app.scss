@@ -148,6 +148,7 @@ $mdc-typography-font-family: "Metropolis", unquote("sans-serif");
 @import "./themes/dark.scss";
 
 @import "@material/drawer/mdc-drawer";
+@import "@material/elevation/mdc-elevation";
 @import "@material/list/mdc-list";
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
@@ -871,23 +872,73 @@ section#login {
     }
 }
 
-.calendar {
+.mdc-calendar {
+    @include mdc-elevation ( 2 );
     width: 100%;
     height: 100%;
-    padding: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    display: grid;
+    grid-row-gap: 16px;
+    grid-template-rows: auto 1fr;
 
-    th, td {
-        text-align: center;
+    header {
+        height: 64px;
+        width: 100%;
+        display: grid;
+        align-items: center;
+        background-color: var(--mdc-theme-primary);
+        color: var(--mdc-theme-on-primary);
+
+        h1 {
+            font-size: 1.25rem;
+            line-height: 2rem;
+            font-weight: 500;
+            letter-spacing: 0.0125em;
+            text-decoration: inherit;
+            text-transform: inherit;
+            padding-left: 20px;
+            padding-right: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            z-index: 1;
+        }
     }
 
-    td.today span {
-        display: inline-block;
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        padding: 8px;
-        background: var(--mdc-theme-primary);
-        color: var(--mdc-theme-on-primary);
-        text-align: center;
+    table {
+        height: 100%;
+
+        th {
+           padding-bottom: 40px;
+        }
+        
+        th, td {
+            text-align: center;
+        }
+
+        td {
+            position: relative;
+            vertical-align: text-top;
+
+            svg {
+                position: absolute;
+                top: 50%;
+                fill: var(--mdc-theme-primary);
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        td.today span {
+            display: inline-block;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            padding: 8px;
+            background: var(--mdc-theme-primary);
+            color: var(--mdc-theme-on-primary);
+            text-align: center;
+        }
     }
 }
